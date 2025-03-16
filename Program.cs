@@ -59,7 +59,7 @@ app.MapPut("/updateuser", (PostgresContext db, User user) =>
     db.SaveChanges();
 } ); 
 
-// Создание юзера
+// Создание юзер
 app.MapPost("/createuser", (PostgresContext db, User user) =>
 {
     db.Users.Add(user);
