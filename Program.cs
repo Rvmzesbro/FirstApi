@@ -52,14 +52,14 @@ app.MapDelete("/deleteuser/{id:int}", (PostgresContext db, int id) =>
     db.SaveChanges();
 });
 
-// Обновление юзер
+// Обновление юзера
 app.MapPut("/updateuser", (PostgresContext db, User user) =>
 {
     db.Users.Update(user);
     db.SaveChanges();
 } ); 
 
-// Создание юзер
+// Создание юзера
 app.MapPost("/createuser", (PostgresContext db, User user) =>
 {
     db.Users.Add(user);
